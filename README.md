@@ -1,4 +1,4 @@
-[![](https://images.microbadger.com/badges/image/robertdebock/docker-cntlm.svg)](http://microbadger.com/images/robertdebock/docker-cntlm "Get your own image badge on microbadger.com")
+[![](https://images.microbadger.com/badges/image/fabiocaseri/cntlm.svg)](http://microbadger.com/images/fabiocaseri/cntlm "Get your own image badge on microbadger.com")
 
 # docker-cntlm
 A container to function as a proxy, based on [Cntlm](http://cntlm.sourceforge.net). Other containers can link to this one for their web access. This container authenticates to an external proxy and can be used by other containers without authentication details.
@@ -7,7 +7,7 @@ A container to function as a proxy, based on [Cntlm](http://cntlm.sourceforge.ne
 A password hash needs te be generated once, after which is can be used when running the proxy.
 
     docker run \
-      robertdebock/docker-cntlm \
+      fabiocaseri/cntlm \
       /bin/sh -c \
       "echo Password YoUrPaSsWoRd > /etc/cntlm.conf ; \
       /usr/sbin/cntlm -H \
@@ -38,7 +38,7 @@ This is an example of how to run this container.
     -e "DOMAIN=mydomain" \
     -e "PASSNTLMV2=640937B847F8C6439D87155508FA8479" \
     -e "PROXY=123.123.123.123:8080" \
-    robertdebock/docker-cntlm
+    fabiocaseri/cntlm
 
 Other settings you might want to use are:
 
