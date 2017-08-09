@@ -48,6 +48,10 @@ Other settings you might want to use are:
 | PASSNTLMV2 | Required for auth method Auth NTLMv2. |
 | PASSNT | Required for auth method Auth NTLM2SR, Auth NT and Auth NTLM. |
 | PASSLM | Required for auth method Auth LM and Auth NTLM. |
+| AUTH | Optional authentication type: NTLMv2 \| NTLM2SR \| NT \| NTLM \| LM. |
+| FLAGS | Optional NTLM authentication flags. |
+| GATEWAY | Optional Gateway mode, cntlm listens on all network interfaces. |
+| NOPROXY | Optional NoProxy string, overwrites the default: `localhost, 127.0.0.*, 10.*, 192.168.*`. |
 | OPTIONS | Optional variable to enable cntlm features. I.e. for debugging: "-v". |
 
 Find [technical details here](http://cntlm.sourceforge.net/cntlm_manual.pdf).
