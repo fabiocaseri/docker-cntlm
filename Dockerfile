@@ -33,4 +33,5 @@ EXPOSE 3128
 
 COPY start.sh /start.sh
 
+ENTRYPOINT ["/start.sh"]
 CMD ["/start.sh"]

@@ -6,6 +6,10 @@ A container to function as a proxy, based on [Cntlm](http://cntlm.sourceforge.ne
 ## Generating a password hash
 A password hash needs te be generated once, after which is can be used when running the proxy.
 
+    docker run --rm -it fabiocaseri/cntlm -H
+
+---
+
     docker run \
       fabiocaseri/cntlm \
       /bin/sh -c \
