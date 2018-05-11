@@ -10,13 +10,10 @@ A password hash needs te be generated once, after which is can be used when runn
 
 ---
 
-    docker run \
-      fabiocaseri/cntlm \
-      /bin/sh -c \
-      "echo Password YoUrPaSsWoRd > /etc/cntlm.conf ; \
-      /usr/sbin/cntlm -H \
+    echo YoUrPaSsWoRd | docker run --rm -i \
+      fabiocaseri/cntlm -H \
       -u username \
-      -d mydomain"
+      -d mydomain
 
 Replace:
 - YoUrPaSsWoRd for your own password.
